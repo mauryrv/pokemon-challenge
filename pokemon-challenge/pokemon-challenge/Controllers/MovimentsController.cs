@@ -12,6 +12,7 @@ using pokemon_challenge.Models;
 
 namespace pokemon_challenge.Controllers
 {
+    [ApiExplorerSettings(IgnoreApi = true)]
     public class MovimentsController : ApiController
     {
         private pokemon_challengeContext db = new pokemon_challengeContext();

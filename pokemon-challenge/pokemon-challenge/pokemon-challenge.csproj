@@ -9,7 +9,7 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{2E905DDD-2F6A-4801-9E5D-00D618640A17}</ProjectGuid>
+    <ProjectGuid>{268F7959-3BB4-4D97-BAA3-8A615AAC9F65}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -182,28 +182,25 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\SampleDirection.cs" />
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
-    <Compile Include="Controllers\HabilitiesController.cs" />
+    <Compile Include="Controllers\AbilitiesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MovimentsController.cs" />
-    <Compile Include="Controllers\PokemonInfoController.cs" />
-    <Compile Include="Controllers\ValuesController.cs" />
+    <Compile Include="Controllers\PokemonInfoesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201801201641253_Initial.cs" />
-    <Compile Include="Migrations\201801201641253_Initial.Designer.cs">
-      <DependentUpon>201801201641253_Initial.cs</DependentUpon>
+    <Compile Include="Migrations\201801202110519_Initial.cs" />
+    <Compile Include="Migrations\201801202110519_Initial.Designer.cs">
+      <DependentUpon>201801202110519_Initial.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201801201653375_PokemonInfoChange.cs" />
-    <Compile Include="Migrations\201801201653375_PokemonInfoChange.Designer.cs">
-      <DependentUpon>201801201653375_PokemonInfoChange.cs</DependentUpon>
+    <Compile Include="Migrations\201801202217564_ColunmTypeCorrections.cs" />
+    <Compile Include="Migrations\201801202217564_ColunmTypeCorrections.Designer.cs">
+      <DependentUpon>201801202217564_ColunmTypeCorrections.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="Models\Habilities.cs" />
+    <Compile Include="Models\Abilities.cs" />
     <Compile Include="Models\Moviments.cs" />
-    <Compile Include="Models\PokemonHabilities.cs" />
     <Compile Include="Models\PokemonInfo.cs" />
-    <Compile Include="Models\PokemonMoviments.cs" />
     <Compile Include="Models\pokemon_challengeContext.cs" />
     <Compile Include="PokeHelper\PokeApiClient.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -279,15 +276,12 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201801201641253_Initial.resx">
-      <DependentUpon>201801201641253_Initial.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201801202110519_Initial.resx">
+      <DependentUpon>201801202110519_Initial.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201801201653375_PokemonInfoChange.resx">
-      <DependentUpon>201801201653375_PokemonInfoChange.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201801202217564_ColunmTypeCorrections.resx">
+      <DependentUpon>201801202217564_ColunmTypeCorrections.cs</DependentUpon>
     </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -305,9 +299,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>51173</DevelopmentServerPort>
+          <DevelopmentServerPort>53871</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:51173/</IISUrl>
+          <IISUrl>http://localhost:53871/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

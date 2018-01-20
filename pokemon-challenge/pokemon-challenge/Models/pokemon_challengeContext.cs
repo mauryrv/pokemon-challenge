@@ -21,8 +21,8 @@ namespace pokemon_challenge.Models
 
         public System.Data.Entity.DbSet<pokemon_challenge.Models.PokemonInfo> PokemonInfoes { get; set; }
 
-        public System.Data.Entity.DbSet<pokemon_challenge.Models.Moviments> Moviments { get; set; }
+        public System.Data.Entity.DbSet<pokemon_challenge.Models.Abilities> Abilities { get; set; }
 
-        public System.Data.Entity.DbSet<pokemon_challenge.Models.Habilities> Habilities { get; set; }
+        public System.Data.Entity.DbSet<pokemon_challenge.Models.Moviments> Moviments { get; set; }
     }
 }

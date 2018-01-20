@@ -29,8 +29,6 @@ c:\users\maury-pc\documents\visual studio 2017\Projects\pokemon-challenge\pokemo
 c:\users\maury-pc\documents\visual studio 2017\Projects\pokemon-challenge\pokemon-challenge\bin\pokemon-challenge.dll
 c:\users\maury-pc\documents\visual studio 2017\Projects\pokemon-challenge\pokemon-challenge\bin\pokemon-challenge.pdb
 c:\users\maury-pc\documents\visual studio 2017\Projects\pokemon-challenge\pokemon-challenge\bin\Antlr3.Runtime.dll
-c:\users\maury-pc\documents\visual studio 2017\Projects\pokemon-challenge\pokemon-challenge\bin\EntityFramework.dll
-c:\users\maury-pc\documents\visual studio 2017\Projects\pokemon-challenge\pokemon-challenge\bin\EntityFramework.SqlServer.dll
 c:\users\maury-pc\documents\visual studio 2017\Projects\pokemon-challenge\pokemon-challenge\bin\Microsoft.AI.Agent.Intercept.dll
 c:\users\maury-pc\documents\visual studio 2017\Projects\pokemon-challenge\pokemon-challenge\bin\Microsoft.AI.DependencyCollector.dll
 c:\users\maury-pc\documents\visual studio 2017\Projects\pokemon-challenge\pokemon-challenge\bin\Microsoft.AI.PerfCounterCollector.dll
@@ -52,8 +50,6 @@ c:\users\maury-pc\documents\visual studio 2017\Projects\pokemon-challenge\pokemo
 c:\users\maury-pc\documents\visual studio 2017\Projects\pokemon-challenge\pokemon-challenge\bin\System.Web.WebPages.dll
 c:\users\maury-pc\documents\visual studio 2017\Projects\pokemon-challenge\pokemon-challenge\bin\System.Web.WebPages.Razor.dll
 c:\users\maury-pc\documents\visual studio 2017\Projects\pokemon-challenge\pokemon-challenge\bin\WebGrease.dll
-c:\users\maury-pc\documents\visual studio 2017\Projects\pokemon-challenge\pokemon-challenge\bin\EntityFramework.xml
-c:\users\maury-pc\documents\visual studio 2017\Projects\pokemon-challenge\pokemon-challenge\bin\EntityFramework.SqlServer.xml
 c:\users\maury-pc\documents\visual studio 2017\Projects\pokemon-challenge\pokemon-challenge\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 c:\users\maury-pc\documents\visual studio 2017\Projects\pokemon-challenge\pokemon-challenge\bin\Newtonsoft.Json.xml
 c:\users\maury-pc\documents\visual studio 2017\Projects\pokemon-challenge\pokemon-challenge\bin\System.Net.Http.Formatting.xml
@@ -72,8 +68,13 @@ c:\users\maury-pc\documents\visual studio 2017\Projects\pokemon-challenge\pokemo
 c:\users\maury-pc\documents\visual studio 2017\Projects\pokemon-challenge\pokemon-challenge\bin\Microsoft.AI.ServerTelemetryChannel.xml
 c:\users\maury-pc\documents\visual studio 2017\Projects\pokemon-challenge\pokemon-challenge\bin\Microsoft.AI.WindowsServer.xml
 c:\users\maury-pc\documents\visual studio 2017\Projects\pokemon-challenge\pokemon-challenge\bin\Microsoft.AI.Web.xml
-c:\users\maury-pc\documents\visual studio 2017\Projects\pokemon-challenge\pokemon-challenge\obj\Debug\pokemon_challenge.Migrations.Initial.resources
-c:\users\maury-pc\documents\visual studio 2017\Projects\pokemon-challenge\pokemon-challenge\obj\Debug\pokemon-challenge.csproj.GenerateResource.Cache
 c:\users\maury-pc\documents\visual studio 2017\Projects\pokemon-challenge\pokemon-challenge\obj\Debug\pokemon-challenge.dll
 c:\users\maury-pc\documents\visual studio 2017\Projects\pokemon-challenge\pokemon-challenge\obj\Debug\pokemon-challenge.pdb
-c:\users\maury-pc\documents\visual studio 2017\Projects\pokemon-challenge\pokemon-challenge\obj\Debug\pokemon_challenge.Migrations.PokemonInfoChange.resources
+c:\users\maury-pc\documents\visual studio 2017\Projects\pokemon-challenge\pokemon-challenge\bin\EntityFramework.dll
+c:\users\maury-pc\documents\visual studio 2017\Projects\pokemon-challenge\pokemon-challenge\bin\EntityFramework.SqlServer.dll
+c:\users\maury-pc\documents\visual studio 2017\Projects\pokemon-challenge\pokemon-challenge\bin\EntityFramework.xml
+c:\users\maury-pc\documents\visual studio 2017\Projects\pokemon-challenge\pokemon-challenge\bin\EntityFramework.SqlServer.xml
+c:\users\maury-pc\documents\visual studio 2017\Projects\pokemon-challenge\pokemon-challenge\obj\Debug\pokemon_challenge.Migrations.Initial.resources
+c:\users\maury-pc\documents\visual studio 2017\Projects\pokemon-challenge\pokemon-challenge\obj\Debug\pokemon-challenge.csproj.GenerateResource.Cache
+c:\users\maury-pc\documents\visual studio 2017\Projects\pokemon-challenge\pokemon-challenge\obj\Debug\pokemon-challenge.csprojResolveAssemblyReference.cache
+c:\users\maury-pc\documents\visual studio 2017\Projects\pokemon-challenge\pokemon-challenge\obj\Debug\pokemon_challenge.Migrations.ColunmTypeCorrections.resources
