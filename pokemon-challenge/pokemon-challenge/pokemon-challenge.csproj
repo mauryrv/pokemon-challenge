@@ -34,6 +34,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <DocumentationFile>App_Data/XmlDocument.xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -197,6 +198,14 @@
     <Compile Include="Migrations\201801202217564_ColunmTypeCorrections.Designer.cs">
       <DependentUpon>201801202217564_ColunmTypeCorrections.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201801212027095_changes.cs" />
+    <Compile Include="Migrations\201801212027095_changes.Designer.cs">
+      <DependentUpon>201801212027095_changes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201801212034159_change2.cs" />
+    <Compile Include="Migrations\201801212034159_change2.Designer.cs">
+      <DependentUpon>201801212034159_change2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Abilities.cs" />
     <Compile Include="Models\Moviments.cs" />
@@ -240,6 +249,7 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Include="Properties\PublishProfiles\pokemonchallenge - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -285,6 +295,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201801202217564_ColunmTypeCorrections.resx">
       <DependentUpon>201801202217564_ColunmTypeCorrections.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801212027095_changes.resx">
+      <DependentUpon>201801212027095_changes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801212034159_change2.resx">
+      <DependentUpon>201801212034159_change2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

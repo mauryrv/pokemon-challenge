@@ -10,7 +10,7 @@ namespace pokemon_challenge.Models
     {
         public Abilities()
         {
-            this.PokemonInfo = new HashSet<PokemonInfo>();
+           this.PokemonInfo = new HashSet<PokemonInfo>();
         }
         [Key]
         public int Id { get; set; }

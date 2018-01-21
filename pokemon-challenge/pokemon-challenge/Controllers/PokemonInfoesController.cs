@@ -18,6 +18,10 @@ namespace pokemon_challenge.Controllers
     {
         private pokemon_challengeContext db = new pokemon_challengeContext();
 
+        /// <summary>
+        /// Get all pokemons.
+        /// </summary>
+        /// <returns></returns>
         // GET: api/PokemonInfoes
         public IHttpActionResult GetPokemonInfoes()
         {
@@ -33,9 +37,13 @@ namespace pokemon_challenge.Controllers
                 return NotFound();
 
             }
-            //return db.PokemonInfoes;
         }
 
+        /// <summary>
+        /// Get a pokemon by id.
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         // GET: api/PokemonInfoes/5
         [ResponseType(typeof(PokemonInfo))]
         public IHttpActionResult GetPokemonInfo(int id)
@@ -49,7 +57,10 @@ namespace pokemon_challenge.Controllers
             return Ok(pokemonInfo);
         }
 
-
+        /// <summary>
+        /// Get the 6 pokemons with max attack and the sum of their weight, base experience, speed, attack and defense.
+        /// </summary>
+        /// <returns></returns>
         // GET: api/PokemonInfoes/getPokemonMaxValues
         [ResponseType(typeof(PokemonMaxValues))]
         [HttpGet]
@@ -82,7 +93,11 @@ namespace pokemon_challenge.Controllers
 
             return Ok(pokemons);
         }
-
+        /// <summary>
+        /// Get contest types. Contest types are categories judges used to weigh a Pokémon's condition in Pokémon contests
+        /// </summary>
+        /// <param name="idOrName"></param>
+        /// <returns></returns>
         // GET: api/PokemonInfoes/getContestType/name or id
         [ResponseType(typeof(ContestType))]
         [HttpGet]
@@ -98,7 +113,12 @@ namespace pokemon_challenge.Controllers
             }
             return Ok(contestType);
         }
-
+        /// <summary>
+        /// Update data of a pokemon using PUT.
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="pokemonInfo"></param>
+        /// <returns></returns>
         // PUT: api/PokemonInfoes/5
         [ResponseType(typeof(void))]
         public IHttpActionResult PutPokemonInfo(int id, PokemonInfo pokemonInfo)
@@ -133,7 +153,12 @@ namespace pokemon_challenge.Controllers
 
             return StatusCode(HttpStatusCode.NoContent);
         }
-
+        /// <summary>
+        /// Update data of a pokemon using PATCH.
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="pokemonInfo"></param>
+        /// <returns></returns>
         // PATCH: api/PokemonInfoes/5
         [ResponseType(typeof(void))]
         [HttpPatch]
@@ -169,8 +194,11 @@ namespace pokemon_challenge.Controllers
 
             return StatusCode(HttpStatusCode.NoContent);
         }
-
-
+        /// <summary>
+        /// Insert Pokemon info.
+        /// </summary>
+        /// <param name="pokemonInfo"></param>
+        /// <returns></returns>
         // POST: api/PokemonInfoes
         [ResponseType(typeof(PokemonInfo))]
         public IHttpActionResult PostPokemonInfo(PokemonInfo pokemonInfo)
@@ -182,9 +210,9 @@ namespace pokemon_challenge.Controllers
 
             foreach (Abilities abilitie in pokemonInfo.Abilities)
             {
-                if(db.Abilities.Find(abilitie.abilitie)==null)
+                if (db.Abilities.Find(abilitie.abilitie) == null)
                 {
-                    return BadRequest("There is no Abilitie "+abilitie.abilitie+"!");
+                    return BadRequest("There is no Abilitie " + abilitie.abilitie + "!");
 
                 }
 
@@ -206,8 +234,13 @@ namespace pokemon_challenge.Controllers
             return CreatedAtRoute("DefaultApi", new { id = pokemonInfo.Id }, pokemonInfo);
         }
 
-        // DELETE: api/PokemonInfoes/5
+        /// <summary>
+        /// Delete pokemon info.
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         [ResponseType(typeof(PokemonInfo))]
+        // DELETE: api/PokemonInfoes/5
         public IHttpActionResult DeletePokemonInfo(int id)
         {
             PokemonInfo pokemonInfo = db.PokemonInfoes.Find(id);
