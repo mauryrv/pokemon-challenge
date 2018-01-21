@@ -202,7 +202,11 @@
     <Compile Include="Models\Moviments.cs" />
     <Compile Include="Models\PokemonInfo.cs" />
     <Compile Include="Models\pokemon_challengeContext.cs" />
+    <Compile Include="PokeHelper\ContestName.cs" />
+    <Compile Include="PokeHelper\ContestType.cs" />
+    <Compile Include="PokeHelper\NamedAPIResource.cs" />
     <Compile Include="PokeHelper\PokeApiClient.cs" />
+    <Compile Include="PokeHelper\PokemonMaxValues.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

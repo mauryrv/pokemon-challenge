@@ -24,17 +24,17 @@ namespace pokemon_challenge.PokeHelper
 
         }
 
-        /* public Customer GetCustomerByEmail(string email)
+         public ContestType GetContestTypeByNameOrId(string idOrName)
          {
-             // Get a customer by ID
-             HttpResponseMessage response = client.GetAsync("customers/byemail?email=" + email).Result;
+             // Get a contest type by name or id
+             HttpResponseMessage response = client.GetAsync("contest-type/" + idOrName).Result;
              if (response.IsSuccessStatusCode)
              {
-                 // Parse the response body. Blocking!
-                 Customer customer = (Customer)response.Content.ReadAsAsync<Customer>().Result;
-                 return customer;
+                // Parse the response body.
+                ContestType contestType = (ContestType)response.Content.ReadAsAsync<ContestType>().Result;
+                 return contestType;
              }
              return null;
-         }*/
+         }
     }
 }
