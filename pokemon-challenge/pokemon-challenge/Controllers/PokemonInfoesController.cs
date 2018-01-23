@@ -121,7 +121,7 @@ namespace pokemon_challenge.Controllers
         /// <param name="pokemonInfo"></param>
         /// <returns></returns>
         // PUT: api/PokemonInfoes/5
-        [ResponseType(typeof(void))]
+        [ResponseType(typeof(PokemonInfo))]
         public IHttpActionResult PutPokemonInfo(int id, PokemonInfo pokemonInfo)
         {
             if (!ModelState.IsValid)
@@ -134,25 +134,14 @@ namespace pokemon_challenge.Controllers
                 return BadRequest();
             }
 
-            db.Entry(pokemonInfo).State = EntityState.Modified;
-
-            try
+            if (!PokemonInfoExists(id))
             {
-                db.SaveChanges();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!PokemonInfoExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
+                return NotFound();
             }
 
-            return StatusCode(HttpStatusCode.NoContent);
+            PokemonInfo newPokemonInfo = UpdatePokemonInfo(pokemonInfo);
+
+            return Ok(newPokemonInfo);
         }
         /// <summary>
         /// Update data of a pokemon using PATCH.
@@ -161,7 +150,7 @@ namespace pokemon_challenge.Controllers
         /// <param name="pokemonInfo"></param>
         /// <returns></returns>
         // PATCH: api/PokemonInfoes/5
-        [ResponseType(typeof(void))]
+        [ResponseType(typeof(PokemonInfo))]
         [HttpPatch]
         public IHttpActionResult PatchPokemonInfo(int id, PokemonInfo pokemonInfo)
         {
@@ -175,25 +164,14 @@ namespace pokemon_challenge.Controllers
                 return BadRequest();
             }
 
-            db.Entry(pokemonInfo).State = EntityState.Modified;
-
-            try
+            if (!PokemonInfoExists(id))
             {
-                db.SaveChanges();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!PokemonInfoExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
+                return NotFound();
             }
 
-            return StatusCode(HttpStatusCode.NoContent);
+            PokemonInfo newPokemonInfo = UpdatePokemonInfo(pokemonInfo);
+
+            return Ok(newPokemonInfo);
         }
         /// <summary>
         /// Insert Pokemon info.
@@ -284,6 +262,62 @@ namespace pokemon_challenge.Controllers
         private bool PokemonInfoExists(int id)
         {
             return db.PokemonInfoes.Count(e => e.Id == id) > 0;
+        }
+
+        private PokemonInfo UpdatePokemonInfo(PokemonInfo pokemonInfo)
+        {
+
+
+            List<int> abilitiesId = new List<int>();
+            foreach (Abilities ab in pokemonInfo.Abilities)
+            {
+                abilitiesId.Add(ab.Id);
+
+            }
+
+            List<int> movimentsId = new List<int>();
+            foreach (Moviments mov in pokemonInfo.Moviments)
+            {
+                movimentsId.Add(mov.Id);
+
+            }
+
+            var oldPokemonInfo = db.PokemonInfoes.Include("Abilities").Include("Moviments").Single(u => u.Id == pokemonInfo.Id);
+
+            var newAbilities = db.Abilities
+                .Where(r => abilitiesId.Contains(r.Id))
+                .ToList();
+
+            oldPokemonInfo.Abilities.Clear();
+            foreach (var abilitie in newAbilities)
+            {
+                oldPokemonInfo.Abilities.Add(abilitie);
+            }
+
+            var newMoviments = db.Moviments
+               .Where(r => movimentsId.Contains(r.Id))
+               .ToList();
+
+            oldPokemonInfo.Moviments.Clear();
+            foreach (var moviment in newMoviments)
+            {
+                oldPokemonInfo.Moviments.Add(moviment);
+            }
+
+            oldPokemonInfo.Image = pokemonInfo.Image;
+            oldPokemonInfo.name = pokemonInfo.name;
+            oldPokemonInfo.speed = pokemonInfo.speed;
+            oldPokemonInfo.weight = pokemonInfo.weight;
+            oldPokemonInfo.defense = pokemonInfo.defense;
+            oldPokemonInfo.baseExperience = pokemonInfo.baseExperience;
+            oldPokemonInfo.attack = pokemonInfo.attack;
+
+            db.Entry(oldPokemonInfo).State = EntityState.Modified;
+
+            db.SaveChanges();
+
+            return oldPokemonInfo;
+
         }
     }
 }
