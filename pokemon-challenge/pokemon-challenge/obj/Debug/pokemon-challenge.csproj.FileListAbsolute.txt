@@ -158,4 +158,3 @@ D:\Desafios-processos_seletivos\pokemon-challenge\pokemon-challenge\pokemon-chal
 D:\Desafios-processos_seletivos\pokemon-challenge\pokemon-challenge\pokemon-challenge\obj\Debug\pokemon-challenge.csproj.GenerateResource.Cache
 D:\Desafios-processos_seletivos\pokemon-challenge\pokemon-challenge\pokemon-challenge\obj\Debug\pokemon-challenge.dll
 D:\Desafios-processos_seletivos\pokemon-challenge\pokemon-challenge\pokemon-challenge\obj\Debug\pokemon-challenge.pdb
-D:\Desafios-processos_seletivos\pokemon-challenge\pokemon-challenge\pokemon-challenge\obj\Debug\pokemon_challenge.Migrations.final.resources
