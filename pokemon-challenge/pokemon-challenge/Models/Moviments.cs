@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -6,6 +7,7 @@ using System.Web;
 
 namespace pokemon_challenge.Models
 {
+    
     public class Moviments
     {
 
@@ -18,6 +20,7 @@ namespace pokemon_challenge.Models
 
         public string moviment { get; set; }
         public string description { get; set; }
+        [JsonIgnore]
         public virtual ICollection<PokemonInfo> PokemonInfo { get; set; }
     }
 }

@@ -108,7 +108,6 @@ D:\Desafios-processos_seletivos\pokemon-challenge\pokemon-challenge\pokemon-chal
 D:\Desafios-processos_seletivos\pokemon-challenge\pokemon-challenge\pokemon-challenge\bin\pokemon-challenge.dll.config
 D:\Desafios-processos_seletivos\pokemon-challenge\pokemon-challenge\pokemon-challenge\bin\pokemon-challenge.dll
 D:\Desafios-processos_seletivos\pokemon-challenge\pokemon-challenge\pokemon-challenge\bin\pokemon-challenge.pdb
-D:\Desafios-processos_seletivos\pokemon-challenge\pokemon-challenge\pokemon-challenge\bin\XmlDocument.xml
 D:\Desafios-processos_seletivos\pokemon-challenge\pokemon-challenge\pokemon-challenge\bin\Antlr3.Runtime.dll
 D:\Desafios-processos_seletivos\pokemon-challenge\pokemon-challenge\pokemon-challenge\bin\EntityFramework.dll
 D:\Desafios-processos_seletivos\pokemon-challenge\pokemon-challenge\pokemon-challenge\bin\EntityFramework.SqlServer.dll
@@ -156,7 +155,7 @@ D:\Desafios-processos_seletivos\pokemon-challenge\pokemon-challenge\pokemon-chal
 D:\Desafios-processos_seletivos\pokemon-challenge\pokemon-challenge\pokemon-challenge\obj\Debug\pokemon_challenge.Migrations.Initial.resources
 D:\Desafios-processos_seletivos\pokemon-challenge\pokemon-challenge\pokemon-challenge\obj\Debug\pokemon_challenge.Migrations.ColunmTypeCorrections.resources
 D:\Desafios-processos_seletivos\pokemon-challenge\pokemon-challenge\pokemon-challenge\obj\Debug\pokemon_challenge.Migrations.changes.resources
-D:\Desafios-processos_seletivos\pokemon-challenge\pokemon-challenge\pokemon-challenge\obj\Debug\pokemon_challenge.Migrations.change2.resources
 D:\Desafios-processos_seletivos\pokemon-challenge\pokemon-challenge\pokemon-challenge\obj\Debug\pokemon-challenge.csproj.GenerateResource.Cache
 D:\Desafios-processos_seletivos\pokemon-challenge\pokemon-challenge\pokemon-challenge\obj\Debug\pokemon-challenge.dll
 D:\Desafios-processos_seletivos\pokemon-challenge\pokemon-challenge\pokemon-challenge\obj\Debug\pokemon-challenge.pdb
+D:\Desafios-processos_seletivos\pokemon-challenge\pokemon-challenge\pokemon-challenge\obj\Debug\pokemon_challenge.Migrations.final.resources

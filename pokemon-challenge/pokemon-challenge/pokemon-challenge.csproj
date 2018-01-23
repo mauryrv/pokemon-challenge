@@ -34,7 +34,8 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DocumentationFile>App_Data/XmlDocument.xml</DocumentationFile>
+    <DocumentationFile>
+    </DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -202,9 +203,13 @@
     <Compile Include="Migrations\201801212027095_changes.Designer.cs">
       <DependentUpon>201801212027095_changes.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201801212034159_change2.cs" />
-    <Compile Include="Migrations\201801212034159_change2.Designer.cs">
-      <DependentUpon>201801212034159_change2.cs</DependentUpon>
+    <Compile Include="Migrations\201801230248234_final.cs" />
+    <Compile Include="Migrations\201801230248234_final.Designer.cs">
+      <DependentUpon>201801230248234_final.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201801230257399_final2.cs" />
+    <Compile Include="Migrations\201801230257399_final2.Designer.cs">
+      <DependentUpon>201801230257399_final2.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Abilities.cs" />
@@ -219,6 +224,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\XmlDocument.xml" />
     <Content Include="Areas\HelpPage\HelpPage.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
@@ -271,9 +277,7 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="App_Data\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
   </ItemGroup>
@@ -299,8 +303,11 @@
     <EmbeddedResource Include="Migrations\201801212027095_changes.resx">
       <DependentUpon>201801212027095_changes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201801212034159_change2.resx">
-      <DependentUpon>201801212034159_change2.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201801230248234_final.resx">
+      <DependentUpon>201801230248234_final.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801230257399_final2.resx">
+      <DependentUpon>201801230257399_final2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -3,4 +3,7 @@
   <parameter name="pokemon_challengeContext-Web.config Connection String" description="pokemon_challengeContext A Cadeia de Conexão usada em web.config pelo aplicativo para acessar o banco de dados." defaultValue="Data Source=(localdb)\MSSQLLocalDB; Initial Catalog=pokemon_challengeContext-20180120190816; Integrated Security=True; MultipleActiveResultSets=True; AttachDbFilename=|DataDirectory|pokemon_challengeContext-20180120190816.mdf" tags="SqlConnectionString">
     <parameterEntry kind="XmlFile" scope="D:\\Desafios-processos_seletivos\\pokemon-challenge\\pokemon-challenge\\pokemon-challenge\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='pokemon_challengeContext']/@connectionString" />
   </parameter>
+  <parameter name="pokemon_challengeContext_DatabasePublish-Web.config Connection String" description="pokemon_challengeContext_DatabasePublish A Cadeia de Conexão usada em web.config pelo aplicativo para acessar o banco de dados." defaultValue="pokemon_challengeContext_DatabasePublish.ConnetionString" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="D:\\Desafios-processos_seletivos\\pokemon-challenge\\pokemon-challenge\\pokemon-challenge\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='pokemon_challengeContext_DatabasePublish']/@connectionString" />
+  </parameter>
 </parameters>

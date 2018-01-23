@@ -21,6 +21,10 @@ namespace pokemon_challenge
 
             HttpConfiguration config = GlobalConfiguration.Configuration;
 
+            config.Formatters.Remove(config.Formatters.XmlFormatter);
+
+            config.Formatters.Remove(config.Formatters.FormUrlEncodedFormatter);
+
             config.Formatters.JsonFormatter
                         .SerializerSettings
                         .ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore;

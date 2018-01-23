@@ -23,6 +23,7 @@ namespace pokemon_challenge.Controllers
         /// </summary>
         /// <returns></returns>
         // GET: api/PokemonInfoes
+        [ResponseType(typeof(List<PokemonInfo>))]
         public IHttpActionResult GetPokemonInfoes()
         {
             List<PokemonInfo> pokemonInfo = new List<PokemonInfo>();
@@ -68,7 +69,7 @@ namespace pokemon_challenge.Controllers
         public IHttpActionResult GetPokemonMaxValues()
         {
             PokemonMaxValues pokemons = new PokemonMaxValues();
-            pokemons.pokemonsInfos = (List<PokemonInfo>)db.PokemonInfoes.OrderByDescending(p => p.attack).Take(6).ToList();
+            pokemons.pokemonsInfos = db.PokemonInfoes.OrderByDescending(p => p.attack).Take(6).ToList();
 
             if (pokemons.pokemonsInfos.Count == 0)
             {
@@ -208,25 +209,41 @@ namespace pokemon_challenge.Controllers
                 return BadRequest(ModelState);
             }
 
-            foreach (Abilities abilitie in pokemonInfo.Abilities)
-            {
-                if (db.Abilities.Find(abilitie.abilitie) == null)
-                {
-                    return BadRequest("There is no Abilitie " + abilitie.abilitie + "!");
+            List<Abilities> abilitiesList = pokemonInfo.Abilities.ToList();
+            pokemonInfo.Abilities = new List<Abilities>();
 
+             foreach (Abilities abilitie in abilitiesList)
+             {
+                 if (db.Abilities.Find(abilitie.Id) == null)
+                 {
+                     return BadRequest("There is no Abilitie " + abilitie.abilitie + "!");
+
+                 }
+                else
+                {
+                    pokemonInfo.Abilities.Add(db.Abilities.Find(abilitie.Id));
+                   
                 }
 
-            }
 
-            foreach (Moviments moviment in pokemonInfo.Moviments)
-            {
-                if (db.Moviments.Find(moviment.moviment) == null)
+             }
+
+            List<Moviments> movimentsList = pokemonInfo.Moviments.ToList();
+            pokemonInfo.Moviments = new List<Moviments>();
+            foreach (Moviments moviment in movimentsList)
+             {
+                 if (db.Moviments.Find(moviment.Id) == null)
+                 {
+                     return BadRequest("There is no move " + moviment.moviment + "!");
+
+                 }
+                 else
                 {
-                    return BadRequest("There is no move " + moviment.moviment + "!");
-
+                    pokemonInfo.Moviments.Add(db.Moviments.Find(moviment.Id));
                 }
+                 
+             }
 
-            }
 
             db.PokemonInfoes.Add(pokemonInfo);
             db.SaveChanges();
